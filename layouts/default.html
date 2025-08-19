@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  {%- seo -%}
+
+  <!-- Primary Meta -->
+  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | default: site.description }}">
+  <meta name="keywords" content="Atchatha, Data Science, Machine Learning, SQL, Python, Analytics, Portfolio, Projects, Kaggle">
+
+  <!-- Google Site Verification (paste code in _config.yml) -->
+  {% if site.google_site_verification and site.google_site_verification != "" %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | relative_url }}" title="{{ site.title }}">
+
+  <!-- GA4 (optional) -->
+  {% if site.google_analytics and site.google_analytics != "" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/hire-me/' | relative_url }}">Hire Me</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-title">Connect</div>
+        <ul class="social">
+          {% if site.social.linkedin %}<li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>{% endif %}
+          {% if site.social.github %}<li><a href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a></li>{% endif %}
+          {% if site.social.medium %}<li><a href="{{ site.social.medium }}" target="_blank" rel="noopener">Medium</a></li>{% endif %}
+          {% if site.social.upwork %}<li><a href="{{ site.social.upwork }}" target="_blank" rel="noopener">Upwork</a></li>{% endif %}
+          {% if site.social.kaggle %}<li><a href="{{ site.social.kaggle }}" target="_blank" rel="noopener">Kaggle</a></li>{% endif %}
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Status</div>
+        <p>© <span id="year"></span> {{ site.author.name }} — All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Auto "Last Updated" (client-side)
+    const lastUpdatedEl = document.getElementById('last-updated');
+    if (lastUpdatedEl) {
+      lastUpdatedEl.textContent = new Date(document.lastModified).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+    }
+    // Per-post last updated
+    const postUpdatedEl = document.getElementById('post-last-updated');
+    if (postUpdatedEl) {
+      postUpdatedEl.textContent = new Date(document.lastModified).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+    }
+  </script>
+</body>
+</html>
