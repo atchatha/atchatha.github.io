@@ -3,7 +3,7 @@ description: "Data Science projects, learning journey, and consulting. SQL • P
 url: "https://atchatha.github.io"
 author:
   name: "Atchatha"
-  email: "your-email@example.com"
+  email: "akshathamurali95@gmail.com"
 
 # Social links for footer (fill the hrefs you have now; leave others blank or remove)
 social:
@@ -42,4 +42,4 @@ defaults:
   - scope:
       path: ""
     values:
-      last_modified: "{{ 'now' | date: '%Y-%m-%d' }}"
+     # last_modified: "{{ 'now' | date: '%Y-%m-%d' }}"
