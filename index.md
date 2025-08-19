@@ -58,10 +58,8 @@ My goal is to solve real problems with clear, measurable impact — and to docum
     Choose how you’d like to reach out:
   </p>
   <div class="btn-row">
-    <a class="btn" href="mailto:{{ akshathamurali95@gmail.com }}?subject=Project%20Inquiry%20from%20Portfolio">Contact via Email</a>
-    {% if site.social.upwork %}
-    <a class="btn secondary" target="_blank" rel="noopener" href="{{ https://www.upwork.com/freelancers/~014471b0eb81906687 }}">Work with me on Upwork</a>
-    {% endif %}
+    <a class="btn" href="mailto:akshathamurali95@gmail.com?subject=Project%20Inquiry%20from%20Portfolio">Contact via Email</a>
+    <a class="btn secondary" target="_blank" rel="noopener" href="https://www.upwork.com/freelancers/~014471b0eb81906687">Work with me on Upwork</a>
   </div>
   <!-- If you want a form without backend, uncomment and add your Formspree endpoint:
   <form action="https://formspree.io/f/yourid" method="POST" style="margin-top:14px">
