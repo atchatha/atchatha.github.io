@@ -10,9 +10,8 @@ I help with **SQL analytics**, **data cleaning & preprocessing**, **dashboards (
 Pick what suits you:
 
 <div class="btn-row">
-  <a class="btn" href="mailto:{{ site.author.email }}?subject=Project%20Inquiry%20from%20Portfolio">Contact via Email</a>
-  {% if site.social.upwork %}
-  <a class="btn secondary" target="_blank" rel="noopener" href="{{ site.social.upwork }}">Work with me on Upwork</a>
+  <a class="btn" href="mailto:akshathamurali95@gmail.com?subject=Project%20Inquiry%20from%20Portfolio">Contact via Email</a>
+  <a class="btn secondary" target="_blank" rel="noopener" href="https://www.upwork.com/freelancers/~014471b0eb81906687">Work with me on Upwork</a>
   {% endif %}
 </div>
 
