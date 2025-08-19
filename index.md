@@ -42,7 +42,7 @@ My goal is to solve real problems with clear, measurable impact — and to docum
       <h3>Netflix Churn Prediction</h3>
       <p class="meta">Classification • Python • scikit-learn</p>
       <div class="btn-row">
-        <a class="btn" href="https://github.com/atchatha/netflix-churn">GitHub</a>
+        <a class="btn" href="https://github.com/<yourusername>/netflix-churn">GitHub</a>
         <a class="btn secondary" href="/netflix-churn-case-study/">Case Study</a>
         <a class="btn secondary" href="https://kaggle.com/...">Kaggle</a>
       </div>
@@ -58,9 +58,16 @@ My goal is to solve real problems with clear, measurable impact — and to docum
     Choose how you’d like to reach out:
   </p>
   <div class="btn-row">
-    <a class="btn" href="mailto:{{ site.author.email }}?subject=Project%20Inquiry%20from%20Portfolio">Contact via Email</a>
+    <a class="btn" href="mailto:{{ akshathamurali95@gmail.com }}?subject=Project%20Inquiry%20from%20Portfolio">Contact via Email</a>
     {% if site.social.upwork %}
-    <a class="btn secondary" target="_blank" rel="noopener" href="{{ site.social.upwork }}">Work with me on Upwork</a>
+    <a class="btn secondary" target="_blank" rel="noopener" href="{{ https://www.upwork.com/freelancers/~014471b0eb81906687 }}">Work with me on Upwork</a>
     {% endif %}
   </div>
+  <!-- If you want a form without backend, uncomment and add your Formspree endpoint:
+  <form action="https://formspree.io/f/yourid" method="POST" style="margin-top:14px">
+    <input type="email" name="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid #1b2533;width:100%;max-width:400px"><br><br>
+    <textarea name="message" placeholder="Tell me about your project..." required style="padding:10px;border-radius:8px;border:1px solid #1b2533;width:100%;max-width:600px;height:140px"></textarea><br><br>
+    <button class="btn" type="submit">Send</button>
+  </form>
+  -->
 </div>
