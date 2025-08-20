@@ -1,71 +1,144 @@
----
-layout: default
-title: "Home – Atchatha"
----
-
-# Hi, I’m Atchatha — I turn data into decisions.
-
-Welcome! I’m a data enthusiast focused on **SQL**, **Python**, **statistics**, and soon, the full **ML stack**.  
-My goal is to solve real problems with clear, measurable impact — and to document that journey openly.
-
-<div class="section">
-  <h2>About Me</h2>
-  <p>
-    I’m meticulous, adaptable, and curious — the kind of person who enjoys digging into messy datasets,
-    finding the signal, and communicating insights simply. I’m actively building my portfolio with
-    real-world datasets (OTT, food delivery, mobility), and sharing what I learn.
-  </p>
-  <p>
-    When I’m not with data, you’ll find me exploring vegetarian recipes, inventing little math games for my kids,
-    or going for a brisk walk.
-  </p>
-</div>
-
-<div class="section">
-  <h2>Skills Timeline <span class="badge">Coming Soon</span></h2>
-  <p class="meta">Last updated: <span id="last-updated"></span></p>
-  <div class="timeline">
-    <!-- Add entries as you complete modules, like:
-    <div class="timeline-item">
-      <div><strong>Oct 2025 — SQL</strong></div>
-      <div class="meta">Queries, joins, CTEs, performance tuning</div>
-    </div>
-    -->
-  </div>
-</div>
-
-<div class="section">
-  <h2>Projects <span class="badge">Coming Soon</span></h2>
-  <div class="card-list">
-    <!-- As you add projects, use this pattern:
-    <div class="card">
-      <h3>Netflix Churn Prediction</h3>
-      <p class="meta">Classification • Python • scikit-learn</p>
-      <div class="btn-row">
-        <a class="btn" href="https://github.com/<yourusername>/netflix-churn">GitHub</a>
-        <a class="btn secondary" href="/netflix-churn-case-study/">Case Study</a>
-        <a class="btn secondary" href="https://kaggle.com/...">Kaggle</a>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atchatha Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Enable dark mode in Tailwind
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#5eead4', // teal
+              DEFAULT: '#14b8a6',
+              dark: '#0d9488'
+            },
+            accent: {
+              light: '#818cf8', // indigo
+              DEFAULT: '#4f46e5',
+              dark: '#3730a3'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-white/90 dark:bg-gray-800/90 shadow z-50 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+      <h1 class="font-bold text-xl text-accent">Atchatha</h1>
+      <div class="flex items-center space-x-6">
+        <a href="#about" class="hover:text-brand">About</a>
+        <a href="#timeline" class="hover:text-brand">Timeline</a>
+        <a href="#projects" class="hover:text-brand">Projects</a>
+        <a href="#blog" class="hover:text-brand">Blog</a>
+        <a href="#hire" class="bg-brand text-white px-3 py-1 rounded hover:bg-brand-dark">Hire Me</a>
+        <!-- Dark Mode Toggle -->
+        <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded bg-accent text-white hover:bg-accent-dark transition">
+          🌙
+        </button>
       </div>
     </div>
-    -->
-  </div>
-</div>
+  </nav>
 
-<div class="section">
-  <h2>Hire Me</h2>
-  <p>
-    Let’s work together. I take on focused analytics and ML mini-projects for startups and small businesses.
-    Choose how you’d like to reach out:
-  </p>
-  <div class="btn-row">
-    <a class="btn" href="mailto:akshathamurali95@gmail.com?subject=Project%20Inquiry%20from%20Portfolio">Contact via Email</a>
-    <a class="btn secondary" target="_blank" rel="noopener" href="https://www.upwork.com/freelancers/~014471b0eb81906687">Work with me on Upwork</a>
-  </div>
-  <!-- If you want a form without backend, uncomment and add your Formspree endpoint:
-  <form action="https://formspree.io/f/yourid" method="POST" style="margin-top:14px">
-    <input type="email" name="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid #1b2533;width:100%;max-width:400px"><br><br>
-    <textarea name="message" placeholder="Tell me about your project..." required style="padding:10px;border-radius:8px;border:1px solid #1b2533;width:100%;max-width:600px;height:140px"></textarea><br><br>
-    <button class="btn" type="submit">Send</button>
-  </form>
-  -->
-</div>
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center items-center text-center" id="hero">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Hi, I'm Atchatha 👋</h2>
+    <p class="text-lg md:text-2xl text-gray-600 dark:text-gray-300 mb-6" data-aos="fade-up" data-aos-delay="100">
+      Data Science Learner | SQL · Python · ML · AI
+    </p>
+    <div class="space-x-4" data-aos="fade-up" data-aos-delay="200">
+      <a href="https://github.com/atchatha" class="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-white">GitHub</a>
+      <a href="https://linkedin.com/in/your-linkedin" class="px-4 py-2 bg-accent text-white rounded hover:bg-accent-dark">LinkedIn</a>
+      <a href="https://medium.com/@your-handle" class="px-4 py-2 bg-brand text-white rounded hover:bg-brand-dark">Blog</a>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" class="py-20 bg-white dark:bg-gray-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-12 text-center text-accent">Learning Timeline</h3>
+      <div class="space-y-8">
+        <div data-aos="fade-right">
+          <h4 class="font-semibold text-xl">Month 1 — SQL</h4>
+          <p class="text-gray-600 dark:text-gray-300">Queries, Joins, CTEs, performance tuning</p>
+        </div>
+        <div data-aos="fade-left">
+          <h4 class="font-semibold text-xl">Month 2 — Python</h4>
+          <p class="text-gray-600 dark:text-gray-300">Pandas, NumPy, scripting</p>
+        </div>
+        <div data-aos="fade-right">
+          <h4 class="font-semibold text-xl">Month 3 — ML</h4>
+          <p class="text-gray-600 dark:text-gray-300">Regression, Classification, Clustering</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-12 text-center text-brand">Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white dark:bg-gray-800 rounded shadow hover:shadow-lg transition" data-aos="zoom-in">
+          <h4 class="font-semibold mb-2">Netflix Churn Prediction</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Classification model predicting churn.</p>
+          <a href="#" class="text-accent hover:underline">View Project →</a>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 rounded shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
+          <h4 class="font-semibold mb-2">Zomato Reviews Analysis</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">NLP sentiment analysis on food reviews.</p>
+          <a href="#" class="text-accent hover:underline">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="py-20 bg-white dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-12 text-center text-accent">Blog</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-6 bg-gray-50 dark:bg-gray-700 rounded shadow hover:shadow-md transition" data-aos="fade-up">
+          <h4 class="font-semibold mb-2">Welcome to My Journey</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Kickstarting my Data Science documentation...</p>
+          <a href="#" class="text-brand hover:underline">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hire Me -->
+  <section id="hire" class="py-20 bg-gray-50 dark:bg-gray-900 text-center">
+    <h3 class="text-3xl font-bold mb-6 text-accent" data-aos="fade-up">Hire Me</h3>
+    <p class="text-gray-600 dark:text-gray-300 mb-6" data-aos="fade-up">Available for freelance projects and consultations.</p>
+    <a href="https://www.upwork.com/freelancers/~your-id" class="px-6 py-3 bg-brand text-white rounded hover:bg-brand-dark" data-aos="fade-up" data-aos-delay="100">Upwork Profile</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>© 2025 Atchatha | Connect: 
+      <a href="https://linkedin.com/in/your-linkedin" class="hover:underline">LinkedIn</a> · 
+      <a href="https://github.com/atchatha" class="hover:underline">GitHub</a> · 
+      <a href="https://medium.com/@your-handle" class="hover:underline">Medium</a> · 
+      <a href="https://kaggle.com/your-handle" class="hover:underline">Kaggle</a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
